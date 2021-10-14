@@ -12,7 +12,7 @@
         <v-btn href="https://bedrocklinux.org/" target="_black" block large light class="my-1 font-weight-black" color="yellow">B</v-btn>
         <v-btn href="https://en.wikipedia.org/wiki/Linus_Torvalds" target="_black" block large light class="my-1 font-weight-black" color="green">T</v-btn>
         <v-btn href="https://archlinux.org/" target="_black" block large light class="my-1 font-weight-black" color="blue darken-2">Q</v-btn>
-        <v-btn href="https://developer.microsoft.com/en-us/windows/iot/" target="_black" block large light class="my-1 font-weight-black" color="purple">I</v-btn>
+        <v-btn href="https://ubuntu.com/download/iot" target="_black" block large light class="my-1 font-weight-black" color="purple">I</v-btn>
         <v-btn href="https://archlinuxarm.org/" target="_black" block large light class="my-1 font-weight-black" color="deep-purple darken-2">A</v-btn>
         <v-btn @click="iterCount" block large light class="my-1 font-weight-black" color="brown">
           <span v-if="count > 0">{{ count }}</span>
