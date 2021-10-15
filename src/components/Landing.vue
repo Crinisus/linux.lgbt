@@ -21,8 +21,8 @@
         <v-btn @click="systemArch" block large light class="my-1 font-weight-black" color="brown">Arch</v-btn>
       </v-card-text>
     </v-card>
-  
-  <!--
+
+
   
   <v-footer color="primary lighten-1" padless>
     <v-row justify="center" no-gutters>
@@ -41,13 +41,13 @@
 
       <v-card>
         <v-card-text>
-          "Your User Agent: " return(this.$Platform.architecture);
+          "Your User Agent: " {{ this.$Platform.architecture }}
         </v-card-text>
       </v-card>
     </v-dialog>
   </div>
   
-  -->
+
 </v-container>
   
 </template>
