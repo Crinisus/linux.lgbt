@@ -18,7 +18,7 @@
           <span v-if="count > 0">{{ count }}</span>
           +
         </v-btn>
-        <v-btn @click="systemArch" block large light class="my-1 font-weight-black" color="brown">Arch</v-btn>
+        <v-btn @click="generateUserAgent" block large light class="my-1 font-weight-black" color="brown">Arch</v-btn>
       </v-card-text>
     </v-card>
 
@@ -40,9 +40,15 @@
       </template>
 
       <v-card>
+        <v-card-title class="justify-center">
+          :)
+        </v-card-title>
         <v-card-text>
-          "Your User Agent: " {{ this.$Platform.architecture }}
+          Your User Agent: {{ this.$Platform.userAgent }}
         </v-card-text>
+        <v-card-text>
+          Reported OS: {{ getOSInfo() }}
+          </v-card-text>
       </v-card>
     </v-dialog>
   </div>
@@ -72,6 +78,16 @@
       },
       systemArch() {
         console.log(this.$Platform.architecture);
+      },
+      getOSInfo() {
+        let wVersions = {
+          "10.0": "Windows 10 or 11"
+        }
+        let arch = ` (${this.$Platform.architecture})`
+        switch (this.$Platform.osPlatform) {
+          case 'windows':
+            return wVersions[this.$Platform.getOSVersion()] + arch;
+        }
       }
     },
   }
