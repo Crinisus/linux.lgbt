@@ -18,11 +18,40 @@
           <span v-if="count > 0">{{ count }}</span>
           +
         </v-btn>
+        <v-btn @click="systemArch" block large light class="my-1 font-weight-black" color="brown">Arch</v-btn>
       </v-card-text>
     </v-card>
+  
+  <!--
+  
+  <v-footer color="primary lighten-1" padless>
+    <v-row justify="center" no-gutters>
+      <v-btn v-for="link in links" :key="link" color="white" text rounded class="my-2">
+        {{ link }}
+      </v-btn>
+    </v-row>
+  </v-footer>
+  <div class="text-center">
+    <v-dialog v-model="dialog" width="500">
+      <template v-slot:activator="{ on, attrs }">
+        <v-btn color="red lighten-2" dark v-bind="attrs" v-on="on">
+          Click Me
+        </v-btn>
+      </template>
 
-  </v-container>
+      <v-card>
+        <v-card-text>
+          "Your User Agent: " return(this.$Platform.architecture);
+        </v-card-text>
+      </v-card>
+    </v-dialog>
+  </div>
+  
+  -->
+</v-container>
+  
 </template>
+
 
 <script>
   export default {
@@ -30,11 +59,20 @@
 
     data: () => ({
       count: 0,
+      return: {
+        dialog: false,
+      },
+      links: [
+        'Your User Agent',
+      ],
     }),
     methods: {
       iterCount() {
         this.count++
+      },
+      systemArch() {
+        console.log(this.$Platform.architecture);
       }
-    }
+    },
   }
 </script>
