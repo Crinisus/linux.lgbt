@@ -14,16 +14,9 @@
         <v-btn href="https://archlinux.org/" target="_black" block large light class="my-1 font-weight-black" color="blue darken-2">Q</v-btn>
         <v-btn href="https://ubuntu.com/download/iot" target="_black" block large light class="my-1 font-weight-black" color="purple">I</v-btn>
         <v-btn href="https://archlinuxarm.org/" target="_black" block large light class="my-1 font-weight-black" color="deep-purple darken-2">A</v-btn>
-        <v-btn @click="iterCount" block large light class="my-1 font-weight-black" color="brown">
-          <span v-if="count > 0">{{ count }}</span>
-          +
-        </v-btn>
-        <v-btn @click="generateUserAgent" block large light class="my-1 font-weight-black" color="brown">Arch</v-btn>
       </v-card-text>
     </v-card>
 
-
-  
   <v-footer color="primary lighten-1" padless>
     <v-row justify="center" no-gutters>
       <v-btn v-for="link in links" :key="link" color="white" text rounded class="my-2">
@@ -32,7 +25,7 @@
     </v-row>
   </v-footer>
   <div class="text-center">
-    <v-dialog v-model="dialog" width="500">
+    <v-dialog width="500">
       <template v-slot:activator="{ on, attrs }">
         <v-btn color="red lighten-2" dark v-bind="attrs" v-on="on">
           Click Me
